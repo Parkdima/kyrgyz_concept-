@@ -16,3 +16,16 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::resources([
+    'air_lines' => \App\Http\Controllers\Auth\AirLineController::class,
+    'air_ports' => \App\Http\Controllers\AirPortController::class,
+    'countries' => \App\Http\Controllers\CountryController::class,
+    'planes' => \App\Http\Controllers\PlaneController::class,
+    'states' => \App\Http\Controllers\StateController::class,
+]);
+
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

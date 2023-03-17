@@ -25,5 +25,5 @@ Route::middleware('auth')->get('/getToken', [TokenController::class, 'generateTo
 
 
 
-Route::post('/airports', [\App\Http\Controllers\API\AirPortController::class, 'index'])->name('airports.api.index');
-Route::post('/converter', [\App\Http\Controllers\AirPortController::class, 'converter']);
+Route::post('/airports', [\App\Http\Controllers\API\AirPortController::class, 'converter'])->name('airports.api.converter');
+

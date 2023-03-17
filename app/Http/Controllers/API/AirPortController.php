@@ -11,7 +11,7 @@ use function PHPUnit\Framework\isEmpty;
 
 class AirPortController extends Controller
 {
-    public function index(Request $request)
+    public function converter(Request $request)
     {
 //        if (isEmpty($request->all())){
 //            return response()->json(['msg' => 'Bad request'], 400);
@@ -87,10 +87,6 @@ class AirPortController extends Controller
 
     }
 
-    public function converter(Request $request)
-    {
-//        return response()->json([ => $request->all()]);
-    }
 
 }
 
